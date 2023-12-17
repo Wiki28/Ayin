@@ -20,7 +20,7 @@ async def _(event):
         asupannya = [
             asupan
             async for asupan in event.client.iter_messages(
-                "@tedeasupancache", filter=InputMessagesFilterVideo
+                "@aspnwiki", filter=InputMessagesFilterVideo
             )
         ]
         await event.client.send_file(
