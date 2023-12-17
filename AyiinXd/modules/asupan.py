@@ -20,23 +20,6 @@ async def _(event):
         asupannya = [
             asupan
             async for asupan in event.client.iter_messages(
-                "@aspnwiki", filter=InputMessagesFilterVideo
-            )
-        ]
-        await event.client.send_file(
-            event.chat_id, file=choice(asupannya), reply_to=event.reply_to_msg_id
-        )
-        await xx.delete()
-    except Exception:
-        await xx.edit("**Tidak bisa menemukan video asupan.**")
-
-@ayiin_cmd(pattern="bkp$")
-async def _(event):
-    xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
-    try:
-        asupannya = [
-            asupan
-            async for asupan in event.client.iter_messages(
                 "@bkpwah", filter=InputMessagesFilterVideo
             )
         ]
@@ -46,7 +29,6 @@ async def _(event):
         await xx.delete()
     except Exception:
         await xx.edit("**Tidak bisa menemukan video asupan.**")
-
 
 @ayiin_cmd(pattern="desahcewe$")
 async def _(event):
